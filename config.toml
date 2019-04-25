@@ -1,0 +1,4 @@
+baseURL = "http://blog.succurity.com/"
+languageCode = "en-us"
+title = "Succurity Blog"
+theme = "hugo-tranquilpeak-theme"
