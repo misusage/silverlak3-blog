@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = git@github.com:silverlak3/silverlak3.github.io.git
+	branch = master
