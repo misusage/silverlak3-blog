@@ -11,7 +11,14 @@
 #If you want a custom commit message, add it as an argument to this script, deploy.sh "<commit message>"
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
+# Clean the published dir
+if [ -d "public/.git" ]; then
+  echo -e "\033[0;32mDeleting published directory...\033[0m"
+	/bin/rm -rf public/* # Keeps the .git
+fi
+
 # Build the project.
+echo -e "\033[0;32mBuilding site...\033[0m"
 hugo -t hugo-tranquilpeak-theme # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 # Go To Public folder
@@ -24,10 +31,13 @@ msg="Updating Website `date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
+echo -e "\033[0;32mCommiting with Message: $msg...\033[0m"
 git commit -m "$msg"
 
 # Push source and build repos.
+echo -e "\033[0;32mPushing to Github...\033[0m"
 git push origin master
 
 # Come Back up to the Project Root
 cd ..
+echo -e "\033[0;32mDONE...\033[0m"

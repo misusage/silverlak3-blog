@@ -28,7 +28,7 @@ canonifyurls = true
 [taxonomies]
   tag = "tags"
   category = "categories"
-  archive = "archives"
+  #archive = "archives"
 
 [author]
   name = "Silverlak3"
@@ -36,12 +36,12 @@ canonifyurls = true
   job = "Infosec"
   location = "US"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "freefastfire@gmail.com"
+  #gravatarEmail = "freefastfire@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+  picture = "/images/me.jpg"
   # Your Twitter username without the @. E.g : thibaudlepretre
-  # twitter = "thibaudlepretre"
+  twitter = "hellarafa"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
   # googlePlus = "+ThibaudLepretre"
 
@@ -54,22 +54,22 @@ canonifyurls = true
   url = "/"
 [[menu.main]]
   weight = 2
-  identifier = "categories"
-  name = "Categories"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
-  url = "/categories"
+  identifier = "posts"
+  name = "All Posts"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-pencil\"></i>"
+  url = "/post"
 [[menu.main]]
   weight = 3
-  identifier = "tags"
-  name = "Tags"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tags\"></i>"
-  url = "/tags"
+  identifier = "write-ups"
+  name = "Writeups"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
+  url = "/categories/write-ups"
 [[menu.main]]
   weight = 4
-  identifier = "archives"
-  name = "Archives"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
-  url = "/archives"
+  identifier = "twitter"
+  name = "Twitter"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-twitter\"></i>"
+  url = "https://twitter.com/hellarafa"
 [[menu.main]]
   weight = 5
   identifier = "about"
@@ -84,12 +84,12 @@ canonifyurls = true
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
   url = "https://github.com/silverlak3"
 
-[[menu.misc]]
-  weight = 1
-  identifier = "rss"
-  name = "RSS"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
-  url = "/index.xml"
+#[[menu.misc]]
+#  weight = 1
+#  identifier = "rss"
+#  name = "RSS"
+#  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
+#  url = "/index.xml"
 
 [params]
   # Customize date format use to render blog post date, categories and other
@@ -189,11 +189,6 @@ canonifyurls = true
     name = "Twitter"
     icon = "fa-twitter"
     url = "https://twitter.com/intent/tweet?text=%s"
-
-  [[params.sharingOptions]]
-    name = "Google+"
-    icon = "fa-google-plus"
-    url = "https://plus.google.com/share?url=%s"
 
   [params.header.rightLink]
     class = ""
