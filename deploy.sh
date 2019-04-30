@@ -10,19 +10,26 @@
 
 #If you want a custom commit message, add it as an argument to this script, deploy.sh "<commit message>"
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
+echo ""
 
 # Clean the published dir
 if [ -d "public/.git" ]; then
+  echo "-------------------------------"
   echo -e "\033[0;32mDeleting published directory...\033[0m"
+  echo "-------------------------------"
 	/bin/rm -rf public/* # Keeps the .git
 fi
 
 # Build the project.
+echo "-------------------------------"
 echo -e "\033[0;32mCompiling site...\033[0m"
+echo "-------------------------------"
 hugo -t hugo-tranquilpeak-theme # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 if [ ! -f "public/.git" ]; then
+  echo "-------------------------------"
   echo -e "\033[0;32mAdding public as a submodule...\033[0m"
+  echo "-------------------------------"
   git submodule add -b master git@github.com:silverlak3/silverlak3.github.io.git public
 fi
 
@@ -36,13 +43,18 @@ msg="Updating Website `date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
+echo "-------------------------------"
 echo -e "\033[0;32mCommiting with Message: $msg...\033[0m"
+echo "-------------------------------"
 git commit -m "$msg"
 
 # Push source and build repos.
+echo "-------------------------------"
 echo -e "\033[0;32mPushing to Github...\033[0m"
+echo "-------------------------------"
 git push origin master
 
 # Come Back up to the Project Root
 cd ..
 echo -e "\033[0;32mDONE...\033[0m"
+echo ""
