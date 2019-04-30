@@ -18,8 +18,13 @@ if [ -d "public/.git" ]; then
 fi
 
 # Build the project.
-echo -e "\033[0;32mBuilding site...\033[0m"
+echo -e "\033[0;32mCompiling site...\033[0m"
 hugo -t hugo-tranquilpeak-theme # if using a theme, replace with `hugo -t <YOURTHEME>`
+
+if [ ! -f "public/.git" ]; then
+  echo -e "\033[0;32mAdding public as a submodule...\033[0m"
+  git submodule add -b master git@github.com:silverlak3/silverlak3.github.io.git public
+fi
 
 # Go To Public folder
 cd public
