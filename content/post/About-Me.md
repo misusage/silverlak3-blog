@@ -5,9 +5,8 @@ categories:
 - About Me
 tags:
 - About-Me
-- tag2
 keywords:
-- tech
+- security
 #thumbnailImage: //example.com/image.jpg
 ---
 
