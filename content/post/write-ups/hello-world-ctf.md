@@ -1,6 +1,8 @@
 ---
 title: "Hello World CTF"
 date: 2019-04-27T23:31:29+02:00
+tags:
+- setup
 categories:
 - write-ups
 coverSize: full

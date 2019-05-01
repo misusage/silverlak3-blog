@@ -9,16 +9,17 @@
 #------------
 
 #If you want a custom commit message, add it as an argument to this script, deploy.sh "<commit message>"
+echo "-------------------------------"
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-echo ""
+echo "-------------------------------"
 
 # Clean the published dir
-if [ -d "public/.git" ]; then
-  echo "-------------------------------"
-  echo -e "\033[0;32mDeleting published directory...\033[0m"
-  echo "-------------------------------"
-	/bin/rm -rf public/* # Keeps the .git
-fi
+#if [ -d "public/.git" ]; then
+#  echo "-------------------------------"
+#  echo -e "\033[0;32mDeleting published directory...\033[0m"
+#  echo "-------------------------------"
+#	/bin/rm -rf public/* # Keeps the .git
+#fi
 
 # Build the project.
 echo "-------------------------------"
@@ -56,5 +57,6 @@ git push origin master
 
 # Come Back up to the Project Root
 cd ..
+echo "-------------------------------"
 echo -e "\033[0;32mDONE...\033[0m"
-echo ""
+echo "-------------------------------"
