@@ -17,7 +17,7 @@ languageCode = "en-us"
 defaultContentLanguage = "en-us"
 title = "Silverlake's Succurity Blog"
 theme = "hugo-tranquilpeak-theme"
-disqusShortname = "https-silverlak3s-succurity-blog"
+#disqusShortname = "https-silverlak3s-succurity-blog"
 # googleAnalytics = "UA-123-45"
 paginate = 7
 canonifyurls = true
@@ -33,8 +33,8 @@ canonifyurls = true
 [author]
   name = "Silverlak3"
   bio = "Succurity through Obscurity. Just kidding... That doesn't really work."
-  job = "Infosec"
-  location = "US"
+  job = "Offensive Security"
+  location = "California, US"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   #gravatarEmail = "freefastfire@gmail.com"
   # Your profile picture
@@ -73,9 +73,9 @@ canonifyurls = true
 [[menu.main]]
   weight = 5
   identifier = "about"
-  name = "About"
+  name = "About Me"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
-  url = "/#about"
+  url = "/page/about"
 [[menu.links]]
   weight = 2
   identifier = "twitter"
@@ -95,7 +95,6 @@ canonifyurls = true
 #  name = "RSS"
 #  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
 #  url = "/index.xml"
-
 [params]
   # Customize date format use to render blog post date, categories and other
   # You must use date format used by Go Time package https://golang.org/pkg/time/

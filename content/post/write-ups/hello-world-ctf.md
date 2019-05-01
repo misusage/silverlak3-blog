@@ -12,11 +12,13 @@ autoThumbnailImage: false
 summary : "Just a simple Hello World Page."
 ---
 
+
 |  Event | Challenge | Category | Points | Solves |
 |:----------:|:------------:|:------------:|:------------:|:------------:|
 | some-ctf |  welcome  |  web  | 100 |  122  |
 
-<!--more--><!--toc-->
+<!--toc-->
+<!--more-->
 
 To add a table of contents, literally just add this to the top of the page. `<!--toc-->`
 
