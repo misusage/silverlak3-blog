@@ -2,11 +2,12 @@
 title: "OSCP Field Guide"
 date: 2019-05-01T16:14:05+02:00
 categories:
-- OSCP
+- Offsec
 tags:
 - Offensive Security
+- OSCP
 keywords:
-- tech
+- security
 #thumbnailImage: //example.com/image.jpg
 ---
 

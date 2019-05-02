@@ -1,10 +1,11 @@
 ---
-title: "Hello World CTF"
+title: "Hello World: CTF Edition"
 date: 2019-04-27T23:31:29+02:00
 tags:
 - setup
 categories:
 - posts
+- write-ups
 keywords:
 - hello-world
 coverSize: partial
@@ -13,7 +14,6 @@ coverImage: /images/banner.jpg
 autoThumbnailImage: false
 summary : "Just a simple Hello World Page."
 ---
-
 
 |  Event | Challenge | Category | Points | Solves |
 |:----------:|:------------:|:------------:|:------------:|:------------:|
