@@ -32,11 +32,11 @@ canonifyurls = true
 
 [author]
   name = "Silverlak3"
-  bio = "Succurity through Obscurity. Just kidding... That doesn't really work."
+  bio = "Succurity through Obscurity usually isn't a good idea."
   job = "Offensive Security"
   location = "California, US"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  #gravatarEmail = "freefastfire@gmail.com"
+  #gravatarEmail = ""
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "/images/me.jpg"
@@ -156,7 +156,7 @@ canonifyurls = true
   autoThumbnailImage = true
 
   # Your favicon path, default is "/favicon.png"
-  # favicon = "/favicon.png"
+  favicon = "/images/favicon.ico"
 
   # Header configuration
   # The link at the right of the header is customizable
