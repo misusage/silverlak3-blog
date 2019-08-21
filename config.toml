@@ -15,7 +15,7 @@
 baseURL = "https://blog.succurity.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "Silverlake's Succurity Blog"
+title = "Sage's Succurity Blog"
 theme = "hugo-tranquilpeak-theme"
 #disqusShortname = "https-silverlak3s-succurity-blog"
 # googleAnalytics = "UA-123-45"
@@ -31,7 +31,7 @@ canonifyurls = true
   #archive = "archives"
 
 [author]
-  name = "Silverlak3"
+  name = "Sage"
   bio = "Succurity through Obscurity usually isn't a good idea."
   job = "Offensive Security"
   location = "California, US"
@@ -41,7 +41,7 @@ canonifyurls = true
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "/images/me.jpg"
   # Your Twitter username without the @. E.g : thibaudlepretre
-  twitter = "hellarafa"
+  twitter = "succurity_"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
   # googlePlus = "+ThibaudLepretre"
 
@@ -81,7 +81,7 @@ canonifyurls = true
   identifier = "twitter"
   name = "Twitter"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-twitter\"></i>"
-  url = "https://twitter.com/hellarafa"
+  url = "https://twitter.com/succurity_"
 [[menu.links]]
   weight = 1
   identifier = "github"
