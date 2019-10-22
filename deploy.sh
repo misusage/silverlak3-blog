@@ -13,14 +13,6 @@ echo "-------------------------------"
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 echo "-------------------------------"
 
-# Clean the published dir
-#if [ -d "public/.git" ]; then
-#  echo "-------------------------------"
-#  echo -e "\033[0;32mDeleting published directory...\033[0m"
-#  echo "-------------------------------"
-#	/bin/rm -rf public/* # Keeps the .git
-#fi
-
 # Build the project.
 echo "-------------------------------"
 echo -e "\033[0;32mCompiling site...\033[0m"
