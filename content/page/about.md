@@ -20,6 +20,8 @@ Hello! My name is Rafael Munoz and I am a lifelong security student. I've create
 # About This Blog
 Credit where credit is due so thanks to [@kakawait](https://github.com/kakawait/) for [this beautiful theme](https://github.com/kakawait/hugo-tranquilpeak-theme) you see here. This blog is built using [Hugo](https://gohugo.io/) and is hosted on GitHub.io.
 
+The cover photo is by Jan Kronies on Unsplash.
+
 # Certs
 <i class="fa fa-lg fa-rocket"></i> [OSCP](https://www.offensive-security.com/information-security-certifications/oscp-offensive-security-certified-professional/ "Offensive-Security's OSCP Homepage")
 

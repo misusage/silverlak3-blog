@@ -11,7 +11,7 @@ coverSize: full
 coverMeta: in
 autoThumbnailImage: false
 summary : "Just a simple Hello World Page."
-draft: false
+draft: true
 ---
 
 # HELLO WORLD
