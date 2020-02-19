@@ -1,6 +1,7 @@
 ---
 title: "Intro to RFID Hacking"
 date: 2019-09-01T15:12:55-07:00
+draft: false
 categories:
 - Offsec
 keywords:

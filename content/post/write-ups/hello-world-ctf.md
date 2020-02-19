@@ -1,6 +1,7 @@
 ---
 title: "Hello World: CTF Edition"
 date: 2019-04-27T23:31:29+02:00
+draft: false
 tags:
 - setup
 categories:
