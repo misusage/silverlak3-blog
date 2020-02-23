@@ -50,5 +50,5 @@ git push origin master
 # Come Back up to the Project Root
 cd ..
 echo "-------------------------------"
-echo -e "\033[0;32mDONE...\033[0m"
+echo -e "\033[0;32mDONE. WEBSITE HAS BEEN UPDATED.\033[0m"
 echo "-------------------------------"
