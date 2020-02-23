@@ -12,6 +12,7 @@ tags:
 - Offensive Security
 - RFID Pentesting
 - Proxmark3
+toc: true
 coverImage: /images/rfid-primer/rfid-banner.jpg
 autoThumbnailImage: false
 ---
@@ -19,7 +20,11 @@ This primer is for those that are interested in RFID pentesting. If you don't kn
 
 <!--toc-->
 
-# Hacking with the Proxmark3 RDV4.01
+<hr>
+
+## Hacking with the Proxmark3 RDV4.01
+
+<hr>
 
 Until recently, I've never had the money to buy a Proxmark3 (PM3). I've always had an interest in better understanding RFID technologies but like everything else, something always got in the way of me buying one. While off on a pentesting engagement last year in 2018, one of my coworkers brought an Elechouse Proxmark3 RDV2. He then showed me how to quickly dup our "guest" badge. I was left in awe when we used the clone, a paper-based RFID sticker, to access the building. I then told myself, "the next time I get a chance, I'm buying one."
 
@@ -44,12 +49,15 @@ Why the Proxmark3? Well the PM3 is _the_ tool to use when it comes to RFID testi
 
 Why the RDV4? Well, the RDV4 kit is the latest version of the Proxmark3 made in collaboration with [@iceman](https://twitter.com/herrmann1001), ProxGrind & other outstanding people that are _the_ RFID security experts. If you have the money, get yourself one of these.
 
-
-# Before We Begin: RFID Background Knowledge.
 <hr>
+
+## Before We Begin: RFID Background Knowledge.
+
+<hr>
+
 Before I start going over how to clone RFID cards and badges, there's some prerequisite information you must know about. Don't be a script kiddie and run commands without knowing what they are doing! I know that cloning a badge seems like fun but it's important to understand what is going on with the hardware and what it is exactly what the commands are doing.
 
-__What is RFID?__ Well, RFID stands for __R__adio __F__requency __ID__entification. It uses radio frequency waves to transmit data which is usually stored on a tag or microchip attached to objects. These tags may be battery powered _(active)_ or may not be battery powered _(passive)_, which in the case of employee access badges, use electromagnetic energy transmitted from a RFID reader to power the chip. It is similar to how the wireless charging on your phone works. RFID tags can be used for everything, including tags for asset tracking, building access, your passport & credit cards, and even pet identification (the microchip embedded inside your dog or cat). Although there are many types of RFID tags, we will be focusing on _passive_ RFID tags.
+__What is RFID?__ Well, RFID stands for __R__-adio __F__-requency __ID__-entification. It uses radio frequency waves to transmit data which is usually stored on a tag or microchip attached to objects. These tags may be battery powered _(active)_ or may not be battery powered _(passive)_, which in the case of employee access badges, use electromagnetic energy transmitted from a RFID reader to power the chip. It is similar to how the wireless charging on your phone works. RFID tags can be used for everything, including tags for asset tracking, building access, your passport & credit cards, and even pet identification (the microchip embedded inside your dog or cat). Although there are many types of RFID tags, we will be focusing on _passive_ RFID tags.
 
 __When is RFID?__ RFID is now old technology but it is still being used today. It dates back to World War II (1945) as it was first used to help track & identify aircraft. Nowadays, we use RFID for contactless payments when we head down to the store and tap our phones or credit cards to make purchases.
 
@@ -74,8 +82,12 @@ __What about MIFARE?__ Mifare is the trademark of a series of chips commonly use
 
 Now that you have this info, let's start setting up the PM3.
 
-# Setup: Installation
 <hr>
+
+## Installation
+
+<hr>
+
 __Disclaimer: Keep in mind that the Repo does have instructions on setting up your new Proxmark3. I'll put down the process I went through down below but I recommend you follow those instructions instead of mine. If you brick your unit, please don't blame me.__
 
 To start off, first I cloned the latest firmware from the [RfidResearchGroup repo](https://github.com/RfidResearchGroup/proxmark3) on Github over to my `/opt` folder. I'm using my Kali VM for all of this. I then updated then installed the dependencies.
@@ -121,8 +133,11 @@ OR just run the `proxmark3.sh` script and it will automatically find the device 
 ```c
 pm3 -->
 ```
+<hr>
 
 ## Setup: Compiling & Flashing Firmware & Bootloader.
+
+<hr>
 
 If you're like me, then your device won't work out of the box. I was so sad to have my PM3 not work, especially after spending so much money on it and it being fresh out of the box. After trying to debug the error messages I got, it turned out my device had outdated firmware on it and that firmware wasn't compatible with the latest version of the client. To make things a tiny bit worse, the new firmware wouldn't flash due to my device also having an outdated version of the bootloader.
 
@@ -155,7 +170,7 @@ and I finally got the prompt!! If you get this prompt, that means that everythin
 ```c
 pm3 -->
 ```
-## Setup: Using the PM3 on Mac OSX
+### Setup: Using the PM3 on Mac OSX
 
 Using the Proxmark3 on a Mac is actually pretty easy. I recommend you update the firmware on your device on a linux box with the steps mentioned above first before you attempt to do anything below. I haven't tried updating firmware with a Mac but feel free to do so.
 
@@ -194,8 +209,7 @@ Support iceman on patreon,   https://www.patreon.com/iceman1001/
 ```
 That's it!
 
-
-## Setup: First Time Usage
+### Setup: First Time Usage
 
 Once you're in the PM3 prompt, theres a couple of things you gotta do for first time use. First, let's check the status of the PM3, see the version of the firmware, and tune the antennas. If you've already done all of this, feel free to skip to the next section.
 
@@ -222,9 +236,12 @@ If the version you have is _v3.11_ (latest as of Sept 3, 2019), then there's not
 ```c
 pm3 --> sc upgrade f tools/simmodule/SIM011.BIN
 ```
-
-# Cloning: PM3 Basic Commands
 <hr>
+
+## Cloning: PM3 Basic Commands
+
+<hr>
+
 Now you're ready to do RFID Stuff. To start off you'll be using the following 2 commands. These commands will try to connect with the tag and help you identify what type it is.
 :
 ```c
@@ -244,8 +261,8 @@ To quit, just type `quit` or `exit`.
 ```c
 pm3 --> quit
 ```
-# Cloning: HID ProxCard
-<hr>
+### Cloning: HID ProxCard
+
 Let's look at LF tags. LF tags/cards are easy to clone since the readers only look at the UID for authorization. There's no security at all, just an ID that tells the system who you are. Copy the ID to another writable card, and voila! That's all you need.
 
 I had an old IDENTIV LF tag laying around. It's basically a rebranded HID ProxCard. ProxCards all look the same. Once you memorize what one looks like, you'll be identifying LF cards quickly. On the front, we have the card number "11125", along with the information of the card reseller. Other than that, the back side of the card is completely blank and no other information is given to us.
@@ -298,8 +315,8 @@ Now verify that the card has the new UID. If it doesn't, try cloning it again un
 [+] HID Prox TAG ID: 2006fa56d7 (11115) - Format Len: 26bit - OEM: 000 - FC: 125 - Card: 11115
 ```
 
-# Cloning: MIFARE Classic 1K
-<hr>
+### Cloning: MIFARE Classic 1K
+
 Oof, the MIFARE Classic. Such a very popular card. Much used.
 
 Sectors & Blocks.
@@ -554,12 +571,16 @@ SWEET!! We should now have a have a working dup!
 
 Now that we have the keys, we can basically do whatever we want with the card. The card I used in this example is a hotel key. Unfortunately, the hotel encodes the data onto the card and I'm still trying to figure out what encoding they use. If you know, please hit me up on twitter!
 
-## Cloning: Copy Protections
+### Cloning: Copy Protections
 
 Since some RFID systems can be broken, there are some mitigations out there that you might encounter. For example, some newer RFID readers test to see if cloned cards/tags respond to magic commands. If they do, then the cloned cards are rejected.
 
 Also, don't forget about card revisions. After every disclosed vuln, card manufacturers usually update their cards with a newer firmware to fix any problems. Examples: Mifare Classic &amp; Classic EV1/Plus, Mifare DESFire &amp; DESFire EV1/EV2. So if a particular attack doesn't work for you, then you probably know why.
 
-# Closing Thoughts
 <hr>
+
+## Closing Thoughts
+
+<hr>
+
 With that, you should now be able to go out there and start testing RFID cards with a PM3. Remember, Don't be malicious and always be responsible in disclosing your findings if you do find a vulnerable RFID system. With that, happy hacking!
