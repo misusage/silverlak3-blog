@@ -1,0 +1,52 @@
+lf hid read
+lf hid h
+lf hid clone h
+lf hid clone 3583010089
+lf hid read
+lf search
+hf search
+lf search
+lf hid clone 3583010089
+lf search
+hf search
+lf
+lf t55
+lf t55xx
+lf t55xx read
+lf search
+exit
+lf
+lf t55xx
+lf t55xx detect
+lf tune
+hw tune
+lf tune
+lf read
+lf realf
+lf read
+lf searcb
+lf search
+exit
+lf read
+lf search
+quit
+lf read
+lf hid read
+lf hid clone 2004545289
+lf hid read
+exit
+hf search
+lf hid read
+hf search
+h
+analyse
+hw connect
+exit
+hf search
+exit
+hf search
+hf h
+hf mfdes
+hf mfdes enum
+hf mfdes auth
+exit

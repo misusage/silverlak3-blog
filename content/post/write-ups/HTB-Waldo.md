@@ -3,6 +3,7 @@ title: "HackTheBox - Waldo"
 date: 2020-02-15T00:07:26-08:00
 categories:
 - HackTheBox
+- write-ups
 tags:
 - security
 keywords:
